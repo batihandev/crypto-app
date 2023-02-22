@@ -1,14 +1,31 @@
-import { Layout, Typography, Space } from "antd";
-import { Navbar } from "@/components";
-
+"use client";
+import millify from "millify";
+import { Typography, Row, Col, Statistic } from "antd";
+import Link from "next/link";
+const { Title } = Typography;
 export default function Home() {
   return (
-    <div className="app">
-      <div className="navbar">
-        <Navbar />
-      </div>
-      <div className="main"></div>
-      <div className="footer"></div>
-    </div>
+    <>
+      <Title level={2} className="heading">
+        Global Crypto Stats
+      </Title>
+      <Row>
+        <Col span={12}>
+          <Statistic title="Total Cryptocurrencies" value="5"></Statistic>
+        </Col>
+        <Col span={12}>
+          <Statistic title="Total Exchanges" value="5"></Statistic>
+        </Col>
+        <Col span={12}>
+          <Statistic title="Total Market Cap" value="5"></Statistic>
+        </Col>
+        <Col span={12}>
+          <Statistic title="Total 24h Volume" value="5"></Statistic>
+        </Col>
+        <Col span={12}>
+          <Statistic title="Total Markets" value="5"></Statistic>
+        </Col>
+      </Row>
+    </>
   );
 }

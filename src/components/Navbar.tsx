@@ -23,7 +23,20 @@ export const Navbar = (props: Props) => {
         </Typography.Title>
         {/* <Button className="menu-control-container"></Button> */}
       </div>
+      <Menu theme="dark">
+        <Menu.Item icon={<HomeOutlined />}>
+          <Link href={"/"}>Home</Link>
+        </Menu.Item>
+        <Menu.Item icon={<FundOutlined />}>
+          <Link href={"/cryptocurrencies"}>Cryptocurrencies</Link>
+        </Menu.Item>
+        <Menu.Item icon={<MoneyCollectOutlined />}>
+          <Link href={"/exchanges"}>Exchanges</Link>
+        </Menu.Item>
+        <Menu.Item icon={<BulbOutlined />}>
+          <Link href={"/news"}>News</Link>
+        </Menu.Item>
+      </Menu>
     </div>
   );
 };
-export default Navbar;
