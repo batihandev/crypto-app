@@ -54,7 +54,7 @@ const Page = ({
       title: "24h Volume",
       value: `$ ${
         cryptoDetails ? (
-          cryptoDetails["24hVolume"] && millify(cryptoDetails["24hVolume"])
+          cryptoDetails?.["24hVolume"] && millify(cryptoDetails?.["24hVolume"])
         ) : (
           <Loader />
         )

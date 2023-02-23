@@ -58,7 +58,7 @@ export default function Home() {
         </Title>
       </div>
       <CryptoCurrencies simplified />
-      <div className="home-heading-container">
+      {/* <div className="home-heading-container">
         <Title level={2} className="home-title">
           Latest Crypto News
         </Title>
@@ -66,7 +66,7 @@ export default function Home() {
           <Link href={"/news"}>Show More</Link>
         </Title>
       </div>
-      <News simplified />
+      <News simplified /> */}
     </>
   );
 }

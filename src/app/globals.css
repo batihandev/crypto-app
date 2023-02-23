@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --text-primary: #000;
   --bgPrimary: #fff;
@@ -27,26 +23,31 @@ a:hover {
 }
 
 .navbar {
-  flex: 0.2;
+  flex-shrink: 0;
   background-color: rgb(0, 21, 41);
+  position: relative;
 }
 
 .main {
-  flex: 0.8;
+  width: 100%;
+}
+.main > * {
   width: 100%;
 }
 .routes {
   padding: 20px;
 }
 .nav-container {
-  position: fixed;
-  left: 0;
   margin: 10px;
   height: 100vh;
   margin: 0px;
   background-color: rgb(0, 21, 41);
+  min-width: 260px;
 }
-
+.navbar-fixed {
+  position: fixed;
+  left: 0;
+}
 .logo-container {
   background-color: #001529;
   display: flex;
@@ -77,24 +78,6 @@ a:hover {
   align-items: center;
 }
 
-@media screen and (max-width: 1300px) {
-  .main {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1170px) {
-  .main {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .main {
-    margin-left: 100px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .app {
     flex-direction: column;
@@ -119,7 +102,9 @@ a:hover {
     z-index: 100;
     background-color: var(--bgSecondary);
   }
-
+  .navbar-fixed {
+    width: 100%;
+  }
   .menu-control-container {
     display: block !important;
   }
@@ -302,11 +287,13 @@ a:hover {
   flex-wrap: wrap;
 }
 .news-image-container > * {
-  flex: 1;
+  flex-shrink: 0;
 }
 .news-image-container > img {
   object-fit: cover;
   margin-bottom: 5px;
+  max-width: 150px;
+  max-height: 150px;
 }
 .news-title {
   width: 70%;
