@@ -38,7 +38,7 @@ export const Navbar = (props: Props) => {
         <div className="logo-container">
           <Avatar src={icon.src} size="large" />
           <Typography.Title level={2} className="logo">
-            <Link href={"/"}>Cryptoverse</Link>
+            <Link href="/">Cryptoverse</Link>
           </Typography.Title>
           <Button
             onClick={() => setActiveMenu(!activeMenu)}
@@ -50,10 +50,10 @@ export const Navbar = (props: Props) => {
         {activeMenu && (
           <Menu theme="dark">
             <Menu.Item icon={<HomeOutlined />}>
-              <Link href={"/"}>Home</Link>
+              <Link href="/">Home</Link>
             </Menu.Item>
             <Menu.Item icon={<FundOutlined />}>
-              <Link href={"/cryptocurrencies"}>Cryptocurrencies</Link>
+              <Link href="/cryptocurrencies">Cryptocurrencies</Link>
             </Menu.Item>
             {/* <Menu.Item icon={<MoneyCollectOutlined />}>
               <Link href={"/exchanges"}>Exchanges</Link>
