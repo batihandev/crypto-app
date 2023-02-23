@@ -19,11 +19,11 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <Provider store={store}>
-          <div className="app">
-            <div className="navbar">
-              <Navbar />
-            </div>
+        <div className="app">
+          <div className="navbar">
+            <Navbar />
+          </div>
+          <Provider store={store}>
             <div className="main">
               <Layout>
                 <div className="routes">{children}</div>
@@ -43,8 +43,8 @@ export default function RootLayout({
                 </Space>
               </div>
             </div>
-          </div>
-        </Provider>
+          </Provider>
+        </div>
       </body>
     </html>
   );
