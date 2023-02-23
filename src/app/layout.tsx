@@ -1,10 +1,6 @@
-"use client";
 import { Navbar } from "@/components";
-import { Layout, Space, Typography } from "antd";
-import Link from "next/link";
-import store from "../redux/store";
-import { Provider } from "react-redux";
 import "./globals.css";
+import Main from "@/components/Main";
 
 export default function RootLayout({
   children,
@@ -23,27 +19,7 @@ export default function RootLayout({
           <div className="navbar">
             <Navbar />
           </div>
-          <Provider store={store}>
-            <div className="main">
-              <Layout>
-                <div className="routes">{children}</div>
-              </Layout>
-              <div className="footer">
-                <Typography.Title
-                  level={5}
-                  style={{ color: "white", textAlign: "center" }}
-                >
-                  Cryptoverse <br />
-                  All rights reserved
-                </Typography.Title>
-                <Space className="text-white">
-                  <Link href={"/"}>Home</Link>
-                  <Link href={"/exchanges"}>Exchanges</Link>
-                  <Link href={"/news"}>News</Link>
-                </Space>
-              </div>
-            </div>
-          </Provider>
+          <Main>{children}</Main>
         </div>
       </body>
     </html>

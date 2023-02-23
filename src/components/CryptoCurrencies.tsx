@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import millify from "millify";
 import Link from "next/link";

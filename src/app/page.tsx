@@ -1,6 +1,5 @@
 "use client";
 import { Typography, Row, Col, Statistic } from "antd";
-
 const { Title } = Typography;
 import { useGetCryptosQuery } from "@/services/cryptoApi";
 import millify from "millify";

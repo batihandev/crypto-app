@@ -1,5 +1,4 @@
-import { MenuOutlined } from "@ant-design/icons";
-import { Avatar, Typography, Button } from "antd";
+import { Avatar, Typography } from "antd";
 import Link from "next/link";
 import React from "react";
 import icon from "../images/cryptocurrency.png";
