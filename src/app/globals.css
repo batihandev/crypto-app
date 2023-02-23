@@ -299,6 +299,14 @@ a:hover {
 .news-image-container {
   display: flex !important;
   justify-content: space-between !important;
+  flex-wrap: wrap;
+}
+.news-image-container > * {
+  flex: 1;
+}
+.news-image-container > img {
+  object-fit: cover;
+  margin-bottom: 5px;
 }
 .news-title {
   width: 70%;
