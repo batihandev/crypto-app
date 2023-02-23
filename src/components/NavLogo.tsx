@@ -1,4 +1,4 @@
-import { Avatar, Typography } from "antd";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import icon from "../images/cryptocurrency.png";
@@ -7,10 +7,10 @@ type Props = {};
 const NavLogo = (props: Props) => {
   return (
     <>
-      <Avatar src={icon.src} size="large" />
-      <Typography.Title level={2} className="logo">
-        <Link href="/">Cryptoverse</Link>
-      </Typography.Title>
+      <Link className="logo-link" href="/">
+        <Image src={icon.src} alt="icon" width={40} height={40} />
+        Cryptoverse
+      </Link>
     </>
   );
 };

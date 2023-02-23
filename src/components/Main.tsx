@@ -12,20 +12,20 @@ const Main = ({ children }: { children: React.ReactNode }) => {
         <Layout>
           <div className="routes">{children}</div>
         </Layout>
-      </div>
-      <div className="footer">
-        <Typography.Title
-          level={5}
-          style={{ color: "white", textAlign: "center" }}
-        >
-          Cryptoverse <br />
-          All rights reserved
-        </Typography.Title>
-        <Space className="text-white">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/exchanges"}>Exchanges</Link>
-          <Link href={"/news"}>News</Link>
-        </Space>
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            Cryptoverse <br />
+            All rights reserved
+          </Typography.Title>
+          <Space className="text-white">
+            <Link href={"/"}>Home</Link>
+            <Link href={"/exchanges"}>Exchanges</Link>
+            <Link href={"/news"}>News</Link>
+          </Space>
+        </div>
       </div>
     </Provider>
   );
